@@ -11,9 +11,10 @@ import {
   LargeScissorsImg,
 } from "@/components/image";
 import Link from "next/link";
+import { useLocalStorageState } from "@/components/useLocalStorageState";
 
 export default function Home() {
-  const [score, setScore] = useState(12);
+   const [score, setScore] = useLocalStorageState(12);
   const [choice, setChoice] = useState("");
   const [randomChoice, setRandomChoice] = useState("");
   const choices = ["paper", "rock", "scissor"];
