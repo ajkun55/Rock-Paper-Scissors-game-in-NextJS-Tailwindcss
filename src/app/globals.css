@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  margin-left: 5px;
+}
+.container {
+  width: min-content;
+  border-radius: 50%;
+  box-shadow: 0 0 0 15px rgba(44, 60, 90, 0.5), 0 0 0 40px rgba(39, 56, 86, 0.5),
+    0 0 0 70px rgba(33, 48, 79, 0.5);
+}
+@media (width>1024px) {
+  .container {
+    box-shadow: 0 0 0 60px rgba(44, 60, 90, 0.5),
+      0 0 0 120px rgba(39, 56, 86, 0.5), 0 0 0 180px rgba(33, 48, 79, 0.5);
+  }
+}
+.animation {
+  animation: cssAnimation 0s 1s forwards;
+  visibility: hidden;
+  span {
+    margin-inline: auto;
+  }
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: visible;
+  }
+}
+.animation-outcome {
+  animation: cssAnimation-outcome 0s 2s forwards;
+  visibility: hidden;
+}
+
+@keyframes cssAnimation-outcome {
+  to {
+    visibility: visible;
+  }
+}
